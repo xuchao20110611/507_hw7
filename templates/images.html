@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+table, td {
+  border:1px solid black;
+}
+
+img{
+height:100%;
+width:100%;
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Images</title>
+</head>
+<body>
+    <h1>Hello {{name}}!</h1>
+    <p>Today's technology headlines are...</p>
+
+    <table>
+        <tr> <td>Title</td> <td>Thumbnail</td></tr>
+        {% for title in title_list %}
+            <tr> <td><a href={{title[1]}}>{{title[0]}}</a></td> <td><img src={{title[2]}} alt="ThumbNail pic"/> </td></tr>
+        {% endfor %}
+
+    </table>
+</body>
+</html>

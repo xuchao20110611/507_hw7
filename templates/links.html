@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Links</title>
+</head>
+<body>
+<h1>Hello {{name}}!</h1>
+<p>Today's technology headlines are...</p>
+<ol>
+{% for title in title_list %}
+    <li> <a href={{title[1]}}>{{title[0]}}</a> </li>
+{% endfor %}
+</ol>
+</body>
+</html>
